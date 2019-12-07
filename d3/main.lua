@@ -61,6 +61,7 @@ for n, wire in ipairs(wires) do
 			x = x + len
 		end
 		
+		-- statistics
 		if x > max_x then 
 			max_x = x 
 		elseif x < min_x then

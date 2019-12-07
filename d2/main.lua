@@ -30,7 +30,8 @@ local instruction = {
 	end,
 }
 
-for v in input:gmatch("(.-),") do
+-- reads program from input file
+for v in input:gmatch("[^,]+") do
 	table.insert(program, tonumber(v))
 	table.insert(prog_orig, tonumber(v))
 end
@@ -57,6 +58,8 @@ program[3] = 2
 exec()
 
 print("Value at pos 0: "..program[1])
+
+-- puzzle 2
 
 i = 1
 clear_memory()
